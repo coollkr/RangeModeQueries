@@ -17,20 +17,12 @@ int main() {
     int normal_length = 300000000;
     int oneplus_length = 300000000;
 
-    // string file_in = "/users/grad/liu1/normal_result.txt";
-    string file_in = "/users/grad/liu1/data_book/first_result_book_1000.txt";
+    string file_in = "exact_range_mode_answer.txt";
     double *normal = new double[normal_length];
     read_file(normal, file_in, normal_length);
 
-    string oneplus_file_in = "/users/grad/liu1/data_book/PSTnvMode.txt";
-   //   string oneplus_file_in = "/users/grad/liu1/data_park/PArrayMode.txt";
-   //   string oneplus_file_in = "/users/grad/liu1/data_park/PSTMode.txt";
-    //  string oneplus_file_in =  "/users/grad/liu1/data_park/1plusBitMode.txt";
-  //   string oneplus_file_in =  "/users/grad/liu1/data_park/1plusMode.txt";
-   //   string oneplus_file_in = "/users/grad/liu1/data_park/TriMode.txt";
-   //  string oneplus_file_in = "/users/grad/liu1/data_park/HeplusBitMode.txt";
-  //   string oneplus_file_in = "/users/grad/liu1/data_book/HeplusMode.txt";
-
+    string oneplus_file_in = "approximate_range_mode_answer.txt";
+    
     double *oneplus = new double[oneplus_length];
     read_file(oneplus, oneplus_file_in, oneplus_length);
     double avgTiny = 0, avgMed = 0, avgHuge = 0;

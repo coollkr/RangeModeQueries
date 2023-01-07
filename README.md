@@ -1,3 +1,5 @@
+RangeModeQueries
+
 We store the source code in different directories, and each of them is named after the same abbreviation used in our paper.
 
 And once you finish running the code, you will get one txt file.

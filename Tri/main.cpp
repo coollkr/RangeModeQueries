@@ -25,18 +25,15 @@ int main() {
     //  len = 8571089;
     //  len = 6715122;
     len = 10000000;
-    //len = 100000;
+
     double epsilon;
     cout << "please input the alpha: ";
     //cin >> epsilon;
     epsilon = 0.0625;
     int *array = new int[len];
 
-    string file_in = "/users/grad/liu1/data_book/book_1000.txt";
-    //   string file_in = "/users/grad/liu1/data_ip/ip_857.txt";
-    //   string file_in = "/users/grad/liu1/data_text/text_671.txt";
-    //   string file_in = "/users/grad/liu1/data_library/lib_1000.txt";
-    //    string file_in = "/users/grad/liu1/data_park/park_1000.txt";
+    string file_in = "input.txt";
+
 
     read_file(array, file_in, len);
     int delta = 0;
@@ -185,8 +182,8 @@ void queryExperiment(ApproxMode_Tri *approximateMode_Bit_EHMNS, int delta, int**
         result[i / 2] = freq;
     }
 
-    ofstream moderesult("/users/grad/liu1/data_book/TriMode.txt");
-    //ofstream moderesult("/users/grad/liu1/HeplusBitMode.txt");
+    ofstream moderesult("result.txt");
+
     for (int i = 0; i < 300000000; i++) {
         moderesult << result[i] << " ";
         if ((i + 1) % 10 == 0) {
@@ -220,12 +217,9 @@ void read_file(int array[], string file, int len) {
 
 void generate_query(int *tiny_query, int *med_query, int *huge_query, int query){
     int len = query;
-    /*string tiny_file = "/users/grad/liu1/tiny.txt";
-    string med_file = "/users/grad/liu1/med.txt";
-    string huge_file = "/users/grad/liu1/huge.txt";*/
-    string tiny_file = "/users/grad/liu1/data_book/tinyApp.txt";
-    string med_file = "/users/grad/liu1/data_book/medApp.txt";
-    string huge_file = "/users/grad/liu1/data_book/hugeApp.txt";
+    string tiny_file = "tinyApp.txt";
+    string med_file = "medApp.txt";
+    string huge_file = "hugeApp.txt";
     ifstream tiny_in(tiny_file);
     ifstream med_in(med_file);
     ifstream huge_in(huge_file);

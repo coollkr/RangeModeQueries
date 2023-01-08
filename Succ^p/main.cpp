@@ -29,11 +29,8 @@ int main() {
     //cin >> epsilon;
     epsilon = 0.0625;
     int *array = new int[len];
-    //   string file_in = "/users/grad/liu1/data_book/book_1000.txt";
-    //  string file_in = "/users/grad/liu1/data_ip/ip_857.txt";
-    //   string file_in = "/users/grad/liu1/data_text/text_671.txt";
-    //   string file_in = "/users/grad/liu1/data_library/lib_1000.txt";
-    string file_in = "/users/grad/liu1/data_park/park_1000.txt";
+
+    string file_in = "input.txt";
     read_file(array, file_in, len);
 
     int delta = 0;
@@ -42,14 +39,14 @@ int main() {
     }
     int* QaSize = new int[delta];
     int** Qa = new int*[delta];
-    string file_QaSize_in = "/users/grad/liu1/data_park/QaSize.txt";
+    string file_QaSize_in = "QaSize.txt";
     read_file(QaSize, file_QaSize_in, delta);
 
     for (int i = 0; i < delta; i++) {
         Qa[i] = new int[QaSize[i]];
     }
 
-    string file_Qa_in = "/users/grad/liu1/data_park/Qa.txt";
+    string file_Qa_in = "Qa.txt";
     read_Qa_file(Qa, QaSize, file_Qa_in, delta);
 
 
@@ -181,7 +178,7 @@ void queryExperiment(ApproxMode_Succ_Plain *approximateMode_Bit_EHMNS, int delta
     }
 
 
-    ofstream moderesult("/users/grad/liu1/data_park/HeplusBitMode.txt");
+    ofstream moderesult("result.txt");
     for (int i = 0; i < 300000000; i++) {
         moderesult << result[i] << " ";
         if ((i + 1) % 10 == 0) {
@@ -215,12 +212,10 @@ void read_file(int array[], string file, int len) {
 
 void generate_query(int *tiny_query, int *med_query, int *huge_query, int query){
     int len = query;
-    /*string tiny_file = "/users/grad/liu1/tiny.txt";
-    string med_file = "/users/grad/liu1/med.txt";
-    string huge_file = "/users/grad/liu1/huge.txt";*/
-    string tiny_file = "/users/grad/liu1/data_park/tinyApp.txt";
-    string med_file = "/users/grad/liu1/data_park/medApp.txt";
-    string huge_file = "/users/grad/liu1/data_park/hugeApp.txt";
+
+    string tiny_file = "tinyApp.txt";
+    string med_file = "medApp.txt";
+    string huge_file = "hugeApp.txt";
     ifstream tiny_in(tiny_file);
     ifstream med_in(med_file);
     ifstream huge_in(huge_file);

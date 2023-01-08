@@ -36,11 +36,8 @@ int main() {
     cout << " s: " << s << endl;
     int *array = new int[len];
 
-   //   string file_in = "/users/grad/liu1/data_book/book_1000.txt";
-   //    string file_in = "/users/grad/liu1/data_ip/ip_857.txt";
-   //  string file_in = "/users/grad/liu1/data_text/text_671.txt";
-   //     string file_in = "/users/grad/liu1/data_library/lib_1000.txt";
-     string file_in = "/users/grad/liu1/data_park/park_1000.txt";
+
+     string file_in = "input.txt";
 
 
     read_file(array, file_in, len);
@@ -128,8 +125,8 @@ void queryExperiment(ExactMode_Supsr *exactMode_Bit_KMS) {
     delete[] tiny_query;
     delete[] med_query;
     delete[] huge_query;
-    //ofstream first_result("/users/grad/liu1/first_result.txt");
-    ofstream first_result("/users/grad/liu1/data_park/kms.txt");
+
+    ofstream first_result("result.txt");
     for (int i = 0; i < 3000000; i++) {
         first_result << result[i] << " ";
         if ((i + 1) % 10 == 0) {
@@ -146,12 +143,10 @@ void queryExperiment(ExactMode_Supsr *exactMode_Bit_KMS) {
 }
 void generate_query(int *tiny_query, int *med_query, int *huge_query, int query){
     int len = query;
-    /*string tiny_file = "/users/grad/liu1/tiny.txt";
-    string med_file = "/users/grad/liu1/med.txt";
-    string huge_file = "/users/grad/liu1/huge.txt";*/
-    string tiny_file = "/users/grad/liu1/data_park/tinyExact.txt";
-    string med_file = "/users/grad/liu1/data_park/medExact.txt";
-    string huge_file = "/users/grad/liu1/data_park/hugeExact.txt";
+
+    string tiny_file = "tinyExact.txt";
+    string med_file = "medExact.txt";
+    string huge_file = "hugeExact.txt";
 
     ifstream tiny_in(tiny_file);
     ifstream med_in(med_file);

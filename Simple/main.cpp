@@ -20,25 +20,23 @@ int rightsideBinarySearch(int end, int row, int* rowQa, int size);
 int main() {
     int len;   // the length of input array
     cout << "please input the length of the array: ";
-    //cin >> len;
+
 
     //   len = 8571089;
     len = 6715122;
     // len = 10000000;
-    //len = 20;
+
     double epsilon;
     cout << "please input the alpha: ";
     // cin >> epsilon;
     epsilon = 0.5;
     double alpha = (double) 1 / (1 + epsilon);
-    //double alpha = epsilon;
+
     cout << "alpha: " << alpha << endl;
     int *array = new int[len];
-    //   string file_in = "/users/grad/liu1/data_book/book_1000.txt";
-    //   string file_in = "/users/grad/liu1/data_ip/ip_857.txt";
-    string file_in = "/users/grad/liu1/data_text/text_671.txt";
-    //   string file_in = "/users/grad/liu1/data_library/lib_1000.txt";
-    // string file_in = "/users/grad/liu1/data_park/park_1000.txt";
+
+    string file_in = "input.txt";
+
 
     read_file(array, file_in, len);
 
@@ -184,8 +182,8 @@ void queryExperiment(ApproxMode_Simple *approximateMode_BKMT, int delta, int** Q
 
 
 
-    //ofstream integrated_result("/users/grad/liu1/PSTMode.txt");
-    ofstream integrated_result("/users/grad/liu1/data_text/PSTnvMode.txt");
+
+    ofstream integrated_result("result.txt");
     for (int i = 0; i < 300000000; i++) {
         integrated_result << result[i] << " ";
         if ((i + 1) % 10 == 0) {

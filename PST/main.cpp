@@ -20,10 +20,8 @@ int rightsideBinarySearch(int end, int row, int* rowQa, int size);
 int main() {
     int len;   // the length of input array
     len = 10000000;
-    // len = 20;
     double epsilon;
-    cout << "please input the alpha: ";
-    // cin >> epsilon;
+
     epsilon = 0.5;
     double alpha = (double) 1 / (1 + epsilon);
 

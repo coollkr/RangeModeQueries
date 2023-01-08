@@ -17,8 +17,7 @@ double diffSystemTime(struct rusage *start, struct rusage *end);
 
 int main() {
     int len;   // the length of input array
-    cout << "please input the length of the array: ";
-    //cin >> len;
+
     //   len = 8571089;
     len = 10000000;
     //   len = 6715122;
@@ -26,26 +25,14 @@ int main() {
     int w = 64;
     int s = ceil(sqrt(len * w));      // fixed value : the number of blocks
 
-    // s = 8192;
-    //s = 8192;
-    //  s = 24576;
-    //   s = 36864;
-    //  s =  50176;
-    // s = 32768 ;
-    //s = 65536;
-    // s = 88064;
-
+ 
     // cout << s << endl;
     s = 1 * s;
 
     cout << " s: " << s << endl;
     int *array = new int[len];
-    //   string file_in = "/users/grad/liu1/book1.txt";
-    //     string file_in = "/users/grad/liu1/data_book/book_1000.txt";
-    //  string file_in = "/users/grad/liu1/data_ip/ip_857.txt";
-    //   string file_in = "/users/grad/liu1/data_text/text_671.txt";
-    //   string file_in = "/users/grad/liu1/data_library/lib_1000.txt";
-    string file_in = "/users/grad/liu1/data_park/park_1000.txt";
+
+    string file_in = "input.txt";
 
 
     read_file(array, file_in, len);
@@ -129,8 +116,8 @@ void queryExperiment(ExactMode_Subsr1_Plain *exactMode_Bit_CDLMW) {
     delete[] tiny_query;
     delete[] med_query;
     delete[] huge_query;
-    //ofstream integrated_result("/users/grad/liu1/BitTimothyResult.txt");
-    ofstream integrated_result("/users/grad/liu1/data_park/BitTimothyResult_book_1000.txt");
+
+    ofstream integrated_result("result.txt");
 
     for (int i = 0; i < 3000000; i++) {
         integrated_result << result[i] << " ";
@@ -149,12 +136,10 @@ void queryExperiment(ExactMode_Subsr1_Plain *exactMode_Bit_CDLMW) {
 
 void generate_query(int *tiny_query, int *med_query, int *huge_query, int query){
     int len = query;
-    /*string tiny_file = "/users/grad/liu1/tiny.txt";
-    string med_file = "/users/grad/liu1/med.txt";
-    string huge_file = "/users/grad/liu1/huge.txt";*/
-    string tiny_file = "/users/grad/liu1/data_park/tinyExact.txt";
-    string med_file = "/users/grad/liu1/data_park/medExact.txt";
-    string huge_file = "/users/grad/liu1/data_park/hugeExact.txt";
+
+    string tiny_file = "tinyExact.txt";
+    string med_file = "medExact.txt";
+    string huge_file = "hugeExact.txt";
 
     ifstream tiny_in(tiny_file);
     ifstream med_in(med_file);

@@ -17,8 +17,6 @@ int main() {
 
 
     int len = 0;
-    cout << "please input the length of the array: ";
-    //cin >> len;
     //  len = 10000000;
     len = 8571089;
     //   len = 6715122;
@@ -27,12 +25,7 @@ int main() {
 
     int *pa = new int[len];
 
-
-    //  string file_in = "/users/grad/liu1/data_book/book_1000.txt";
-    string file_in = "/users/grad/liu1/data_ip/ip_857.txt";
-    //   string file_in = "/users/grad/liu1/data_text/text_671.txt";
-    //    string file_in = "/users/grad/liu1/data_library/lib_1000.txt";
-    //  string file_in = "/users/grad/liu1/data_park/park_1000.txt";
+    string file_in = "input.txt";
 
     read_file(pa, file_in, len);
     int *tiny_query = new int[2000000];
@@ -147,7 +140,7 @@ int main() {
     delete[] tiny_query;
     delete[] med_query;
     delete[] huge_query;
-    ofstream normal_result("/users/grad/liu1/data_ip/2correct_result.txt");
+    ofstream normal_result("result.txt");
 
     for (int i = 0; i < 3000000; i++) {
 
@@ -166,12 +159,9 @@ int main() {
 }
 void generate_query(int *tiny_query, int *med_query, int *huge_query, int query){
     int len = query;
-    /*string tiny_file = "/users/grad/liu1/tiny.txt";
-    string med_file = "/users/grad/liu1/med.txt";
-    string huge_file = "/users/grad/liu1/huge.txt";*/
-    string tiny_file = "/users/grad/liu1/data_ip/tinyExact.txt";
-    string med_file = "/users/grad/liu1/data_ip/medExact.txt";
-    string huge_file = "/users/grad/liu1/data_ip/hugeExact.txt";
+    string tiny_file = "tinyExact.txt";
+    string med_file = "medExact.txt";
+    string huge_file = "hugeExact.txt";
     ifstream tiny_in(tiny_file);
     ifstream med_in(med_file);
     ifstream huge_in(huge_file);

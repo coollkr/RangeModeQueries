@@ -151,7 +151,7 @@ int main() {
     delete[] huge_query;
 
 
-    ofstream normal_result("/users/grad/liu1/data_park/2normal_result_1000.txt");
+    ofstream normal_result("result.txt");
     for (int i = 0; i < 3000000; i++) {
 
         normal_result << result[i] << " ";

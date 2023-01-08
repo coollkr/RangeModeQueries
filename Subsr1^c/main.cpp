@@ -24,24 +24,14 @@ int main() {
     int w = 64;
     int s = ceil(sqrt(len * w));      // fixed value : the number of blocks
 
-    //2.5 451.5
-    // 2.8 534
-    //3.5 688
-    //3.9 873
-    // 4.8  1091.0
-    //5.2 1374.6
-    // 6.2 1990
+
 
     s = 1 * s;
     cout << " s: " << s << endl;
     int *array = new int[len];
-    //   string file_in = "/users/grad/liu1/book1.txt";
-    //      string file_in = "/users/grad/liu1/data_book/book_1000.txt";
-    string file_in = "/users/grad/liu1/data_ip/ip_857.txt";
-    //    string file_in = "/users/grad/liu1/data_text/text_671.txt";
-    //    string file_in = "/users/grad/liu1/data_library/lib_1000.txt";
-    //   string file_in = "/users/grad/liu1/data_fly/fly_1000.txt";
-    // string file_in = "/users/grad/liu1/data_park/park_1000.txt";
+
+    string file_in = "input.txt";
+
 
 
     read_file(array, file_in, len);
@@ -125,8 +115,8 @@ void queryExperiment(ExactMode_Subsr1_Compressed *exactMode_Rrr_CDLMW) {
     delete[] tiny_query;
     delete[] med_query;
     delete[] huge_query;
-    //ofstream integrated_result("/users/grad/liu1/BitTimothyResult.txt");
-    ofstream integrated_result("/users/grad/liu1/data_ip/TimothyFreq_book_1000.txt");
+
+    ofstream integrated_result("result.txt");
 
     for (int i = 0; i < 3000000; i++) {
         integrated_result << result[i] << " ";
@@ -145,12 +135,10 @@ void queryExperiment(ExactMode_Subsr1_Compressed *exactMode_Rrr_CDLMW) {
 
 void generate_query(int *tiny_query, int *med_query, int *huge_query, int query){
     int len = query;
-    /*string tiny_file = "/users/grad/liu1/tiny.txt";
-    string med_file = "/users/grad/liu1/med.txt";
-    string huge_file = "/users/grad/liu1/huge.txt";*/
-    string tiny_file = "/users/grad/liu1/data_ip/tinyExact.txt";
-    string med_file = "/users/grad/liu1/data_ip/medExact.txt";
-    string huge_file = "/users/grad/liu1/data_ip/hugeExact.txt";
+
+    string tiny_file = "tinyExact.txt";
+    string med_file = "medExact.txt";
+    string huge_file = "hugeExact.txt";
 
     ifstream tiny_in(tiny_file);
     ifstream med_in(med_file);

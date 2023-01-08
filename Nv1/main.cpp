@@ -20,22 +20,14 @@ int main() {
 
 
     int len = 0;
-    cout << "please input the length of the array: ";
-    //cin >> len;
+
     len = 10000000;
     //  len = 8571089;
     //  len = 6715122;
-    //   len = 100000;
     int *pa = new int[len];
     int *pa_copy = new int[len];
 
-    //  string file_in = "/users/grad/liu1/data_fly/fly_1000.txt";
-    //   string file_in = "/users/grad/liu1/data_book/book_1000.txt";
-    //    string file_in = "/users/grad/liu1/data_ip/ip_857.txt";
-    //   string file_in = "/users/grad/liu1/data_text/text_671.txt";
-    //    string file_in = "/users/grad/liu1/data_library/lib_1000.txt";
-    //  string file_in = "/users/grad/liu1/book1.txt";
-    string file_in = "/users/grad/liu1/data_park/park_1000.txt";
+    string file_in = "input.txt";
 
     read_file(pa, file_in, len);
     int *tiny_query = new int[2000000];
@@ -61,8 +53,7 @@ int main() {
         for (int i = start_index - 1; i < end_index; i++) {
             pa_copy[i] = pa[i];
         }
-        //cout << "i/2: " << i / 2 << "  start: " << start_index << "  end:  " << end_index << endl;
-
+        
         sort(pa_copy + start_index - 1, pa_copy + end_index);
 
         int count = 0;
@@ -95,7 +86,6 @@ int main() {
         for (int i = start_index - 1; i < end_index; i++) {
             pa_copy[i] = pa[i];
         }
-        //cout << "i/2: " << i / 2 << "  start: " << start_index << "  end:  " << end_index << endl;
 
         sort(pa_copy + start_index - 1, pa_copy + end_index);
 
@@ -129,7 +119,6 @@ int main() {
         for (int i = start_index - 1; i < end_index; i++) {
             pa_copy[i] = pa[i];
         }
-        //cout << "i/2: " << i / 2 << "  start: " << start_index << "  end:  " << end_index << endl;
 
         sort(pa_copy + start_index - 1, pa_copy + end_index);
 
@@ -180,12 +169,9 @@ int main() {
 }
 void generate_query(int *tiny_query, int *med_query, int *huge_query, int query){
     int len = query;
-    /*string tiny_file = "/users/grad/liu1/tiny.txt";
-    string med_file = "/users/grad/liu1/med.txt";
-    string huge_file = "/users/grad/liu1/huge.txt";*/
-    string tiny_file = "/users/grad/liu1/data_park/tinyExact.txt";
-    string med_file = "/users/grad/liu1/data_park/medExact.txt";
-    string huge_file = "/users/grad/liu1/data_park/hugeExact.txt";
+    string tiny_file = "tinyExact.txt";
+    string med_file = "medExact.txt";
+    string huge_file = "hugeExact.txt";
     ifstream tiny_in(tiny_file);
     ifstream med_in(med_file);
     ifstream huge_in(huge_file);

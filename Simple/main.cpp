@@ -46,14 +46,14 @@ int main() {
     }
     int* QaSize = new int[delta];
     int** Qa = new int*[delta];
-    string file_QaSize_in = "/users/grad/liu1/data_text/QaSize.txt";
+    string file_QaSize_in = "QaSize.txt";
     read_file(QaSize, file_QaSize_in, delta);
 
     for (int i = 0; i < delta; i++) {
         Qa[i] = new int[QaSize[i]];
     }
 
-    string file_Qa_in = "/users/grad/liu1/data_text/Qa.txt";
+    string file_Qa_in = "Qa.txt";
     read_Qa_file(Qa, QaSize, file_Qa_in, delta);
 
     ApproxMode_Simple *approximateMode_BKMT = new ApproxMode_Simple(array, len, alpha);

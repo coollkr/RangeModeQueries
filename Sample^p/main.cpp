@@ -25,7 +25,7 @@ int main() {
     double alpha;
     cout << "please input the alpha: ";
 
-    alpha = 0.0625;
+    alpha = 0.5;
     int *array = new int[len];
 
     string file_in = "input.txt";
@@ -38,14 +38,14 @@ int main() {
     }
     int* QaSize = new int[delta];
     int** Qa = new int*[delta];
-    string file_QaSize_in = "/users/grad/liu1/data_park/QaSize.txt";
+    string file_QaSize_in = "QaSize.txt";
     read_file(QaSize, file_QaSize_in, delta);
 
     for (int i = 0; i < delta; i++) {
         Qa[i] = new int[QaSize[i]];
     }
 
-    string file_Qa_in = "/users/grad/liu1/data_park/Qa.txt";
+    string file_Qa_in = "Qa.txt";
     read_Qa_file(Qa, QaSize, file_Qa_in, delta);
 
     double epsilonPrime = sqrt(1 + alpha) - 1;

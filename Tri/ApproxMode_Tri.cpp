@@ -1,7 +1,7 @@
 /*
  * It is the file for constructing the data structure and run the query.
  * The abbreviation for this data structure is tri,
- * and it is the data structure described in the following paper.
+ * and it is a non-succinct version (without the use of any succinct data structures) of the data structure described in the following paper.
  *
  * Reference:
  * [1] Hicham El-Zein, Meng He, J Ian Munro, Yakov Nekrich, and Bryce Sandlund. On approximate range mode and range selection. In 30th International Symposium on Algorithms and Computation (ISAAC 2019), volume 149, page 57. Schloss Dagstuhl–LeibnizZentrum fuer Informatik, 2019.

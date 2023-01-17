@@ -1,7 +1,7 @@
 /*
  * It is the file for constructing the data structure and run the query.
  * The abbreviation for this data structure is subsr^2_p,
- * and it is the data structure described in the following paper.
+ * and it is a modified version (with more succinct data structure components) of a solution described in the following paper.
  *
  * Reference: [1] Timothy M. Chan, Stephane Durocher, Kasper Green Larsen, Jason Morrison, and Bryan T. Wilkinson. Linear-space data structures for range mode query in arrays. Theory of Computing Systems, 55(4):719–741, Mar 2013.
  * [2] Simon Gog, Timo Beller, Alistair Moffat, and Matthias Petri. From theory to practice: Plug and play with succinct data structures. In 13th International Symposium on Experimental Algorithms, (SEA 2014), pages 326–337, 2014.

@@ -1,7 +1,7 @@
 /*
  * It is the file for constructing the data structure and run the query.
  * The abbreviation for this data structure is sample^p,
- * and it is the data structure described in the following paper.
+ * and it is a modified version (with more succinct data structure components) of a solution described in the following paper.
  *
  * Reference:
  * [1] Mark Greve, Allan Grønlund Jørgensen, Kasper Dalgaard Larsen, and Jakob Truelsen. Cell probe lower bounds and approximations for range mode. In International Colloquium on Automata, Languages, and Programming, pages 605–616. Springer, 2010.

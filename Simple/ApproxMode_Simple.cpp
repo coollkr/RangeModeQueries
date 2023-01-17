@@ -1,7 +1,7 @@
 /*
  * It is the file for constructing the data structure and run the query.
  * The abbreviation for this data structure is simple,
- * and it is the data structure described in the following paper.
+ * and it is a simple solution described in the following paper before the authors propose a more space-efficient solution.
  *
  * Reference: Prosenjit Bose, Evangelos Kranakis, Pat Morin, and Yihui Tang. Approximate range mode and range median queries. In Annual Symposium on Theoretical Aspects of Computer Science, pages 377–388. Springer, 2005.
  *

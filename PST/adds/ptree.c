@@ -17,7 +17,8 @@
  *
  * This file was modified by Zhen Liu to remove the space overhead needed for generic programming. 
  * This was done only to ensure fair comparisons between the solution we implemented for approximate range mode which used this code and other solutions which do not.
- * If you intend to use this data structure for general purpose, please use the original version implemented by Dana Jansens, since this modified version does not support generic programming.
+ * If you intend to use this data structure for general purpose, please use the original version implemented by Dana Jansens,
+ * since this modified version does not support generic programming.
  *
  */
 

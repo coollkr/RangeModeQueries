@@ -1,7 +1,7 @@
 /*
  * It is the file for constructing the data structure and run the query.
  * The abbreviation for this data structure is sqrt,
- * and it is the data structure described in the following paper.
+ * and it is one of the data structures described in the following paper.
  *
  * Reference: Timothy M. Chan, Stephane Durocher, Kasper Green Larsen, Jason Morrison, and Bryan T. Wilkinson. Linear-space data structures for range mode query in arrays. Theory of Computing Systems, 55(4):719–741, Mar 2013.
  *
